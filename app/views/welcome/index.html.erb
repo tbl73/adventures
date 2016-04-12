@@ -1,6 +1,6 @@
 <style>
 	body {
-		font-color: <%@color%>;
+		color: <%= @color %>;
 	}
 	
 </style>
@@ -13,7 +13,7 @@
 <p>Click <a href="http:\\localhost:3000\activities">here</a> for the activities.</p>
 
 <% @buttons.each do |k, v| %>
-	<%= link_to k, root_path(color: k.downcase), class: v %>
+	<%= link_to k.capitalize, root_path(color: k), class: v %>
 	<%end%>
 
 <p></p>
