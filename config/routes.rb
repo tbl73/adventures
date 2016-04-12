@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   root 'welcome#index'
 
   get 'ilovetocode' => 'welcome#index'
+  get 'contact' => 'welcome#contact'
 
   resources :activities
   resources :states
