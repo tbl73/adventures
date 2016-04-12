@@ -1,6 +1,19 @@
+<style>
+	body {
+		font-color: <%@color%>;
+	}
+	
+</style>
+
 <h1>Welcome to my adventures</h1>
+<h3>This website includes information about various states and activities.</h3>
 
 <p>Click <a href= "http:\\localhost:3000\states">here</a> for the states.</p>
 
 <p>Click <a href="http:\\localhost:3000\activities">here</a> for the activities.</p>
 
+<% @buttons.each do |k, v| %>
+	<%= link_to k, root_path(color: k.downcase), class: v %>
+	<%end%>
+
+<p></p>
