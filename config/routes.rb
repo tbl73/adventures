@@ -3,6 +3,7 @@ Rails.application.routes.draw do
 
   get 'ilovetocode' => 'welcome#index'
   get 'contact' => 'welcome#contact'
+  get 'maps' => 'welcome#maps'
 
   resources :activities
   resources :states

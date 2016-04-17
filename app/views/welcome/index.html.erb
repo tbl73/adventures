@@ -8,12 +8,17 @@
 <h1>Welcome to my adventures</h1>
 <h3>This website includes information about various states and activities.</h3>
 
-<p>Click <a href= "http:\\localhost:3000\states">here</a> for the states.</p>
+<p>Click <%= link_to "here", states_path%> for the states.</p>
 
-<p>Click <a href="http:\\localhost:3000\activities">here</a> for the activities.</p>
+<p>Click <%= link_to "here", activities_path%> for the activities.</p>
+
+<p>Click <%= link_to "here", maps_path%> for some maps.</p>
 
 <% @buttons.each do |k, v| %>
 	<%= link_to k.capitalize, root_path(color: k), class: v %>
+
 	<%end%>
 
-<p></p>
+<p></p>""
+
+<!-- His method was different - did an each loop but interpolated name of button into path ("btn btn-#{descr}") -->
